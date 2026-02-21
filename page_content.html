@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÐÐ°Ð±ÑÐ¸ÑÐ»Ðµ ÐÐµÑÑÐ»Ð°Ð¹ÑÐ¸ÑÐµ â Art Portfolio</title>
+    <meta name="description" content="ÐÐ¾ÑÑÑÐ¾Ð»Ð¸Ð¾ ÑÑÐ´Ð¾Ð¶Ð½Ð¸ÑÑ Ð¸ Ð´Ð¸Ð·Ð°Ð¹Ð½ÐµÑÐ° ÐÐ°Ð±ÑÐ¸ÑÐ»Ðµ ÐÐµÑÑÐ»Ð°Ð¹ÑÐ¸ÑÐµ. ÐÑÐ°ÑÐ¸ÑÐµÑÐºÐ¸Ð¹ Ð´Ð¸Ð·Ð°Ð¹Ð½, Ð¸Ð»Ð»ÑÑÑÑÐ°ÑÐ¸Ð¸, Ð½Ð°ÑÑÐµÐ½Ð½Ð°Ñ ÑÐ¾ÑÐ¿Ð¸ÑÑ, Ð¿Ð¾ÑÑÑÐµÑÑ.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-line"></div>
+            <span class="preloader-text">GABRIELE</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-logo">G.</a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link" data-index="01">ÐÐ±Ð¾ Ð¼Ð½Ðµ</a>
+            <a href="#design" class="nav-link" data-index="02">ÐÐ¸Ð·Ð°Ð¹Ð½</a>
+            <a href="#illustrations" class="nav-link" data-index="03">ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ð¸</a>
+            <a href="#wall-painting" class="nav-link" data-index="04">Ð Ð¾ÑÐ¿Ð¸ÑÑ ÑÑÐµÐ½</a>
+            <a href="#portraits" class="nav-link" data-index="05">ÐÐ¾ÑÑÑÐµÑÑ</a>
+            <a href="#contact" class="nav-link" data-index="06">ÐÐ¾Ð½ÑÐ°ÐºÑ</a>
+        </div>
+        <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="#about" class="mobile-link">ÐÐ±Ð¾ Ð¼Ð½Ðµ</a>
+            <a href="#design" class="mobile-link">ÐÐ¸Ð·Ð°Ð¹Ð½</a>
+            <a href="#illustrations" class="mobile-link">ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ð¸</a>
+            <a href="#wall-painting" class="mobile-link">Ð Ð¾ÑÐ¿Ð¸ÑÑ ÑÑÐµÐ½</a>
+            <a href="#portraits" class="mobile-link">ÐÐ¾ÑÑÑÐµÑÑ</a>
+            <a href="#contact" class="mobile-link">ÐÐ¾Ð½ÑÐ°ÐºÑ</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grain"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-subtitle">
+                <span class="line-mask"><span class="hero-subtitle-text">ART PORTFOLIO</span></span>
+            </div>
+            <h1 class="hero-title">
+                <span class="line-mask"><span class="hero-title-line">ÐÐ°Ð±ÑÐ¸ÑÐ»Ðµ</span></span>
+                <span class="line-mask"><span class="hero-title-line">ÐÐµÑÑÐ»Ð°Ð¹ÑÐ¸ÑÐµ</span></span>
+            </h1>
+            <div class="hero-role">
+                <span class="line-mask"><span class="hero-role-text">Ð¥ÑÐ´Ð¾Ð¶Ð½Ð¸ÑÐ° &mdash; ÐÐ¸Ð·Ð°Ð¹Ð½ÐµÑ &mdash; ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¾Ñ</span></span>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+        <div class="hero-image-float">
+            <img src="static/my_photos/image2.png" alt="ÐÐ°Ð±ÑÐ¸ÑÐ»Ðµ" loading="eager">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">01</span>
+                <span class="section-name">ÐÐ±Ð¾ Ð¼Ð½Ðµ</span>
+            </div>
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img about-img-main" data-speed="0.9">
+                        <img src="static/my_photos/image6.jpeg" alt="ÐÐ°Ð±ÑÐ¸ÑÐ»Ðµ Ð·Ð° ÑÐ°Ð±Ð¾ÑÐ¾Ð¹" loading="lazy">
+                    </div>
+                    <div class="about-img about-img-secondary" data-speed="1.1">
+                        <img src="static/my_photos/image115.jpeg" alt="ÐÐ°Ð±ÑÐ¸ÑÐ»Ðµ" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-heading reveal-text">
+                        ÐÐ´Ðµ Ð¸ÑÐºÑÑÑÑÐ²Ð¾<br>Ð²ÑÑÑÐµÑÐ°ÐµÑ Ð´Ð¸Ð·Ð°Ð¹Ð½
+                    </h2>
+                    <div class="about-description reveal-up">
+                        <p>Ð¯ â ÑÑÐ´Ð¾Ð¶Ð½Ð¸ÑÐ° Ð¸ Ð³ÑÐ°ÑÐ¸ÑÐµÑÐºÐ¸Ð¹ Ð´Ð¸Ð·Ð°Ð¹Ð½ÐµÑ Ñ Ð¼Ð½Ð¾Ð³Ð¾Ð»ÐµÑÐ½Ð¸Ð¼ Ð¾Ð¿ÑÑÐ¾Ð¼ Ð² ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ð¸ Ð²Ð¸Ð·ÑÐ°Ð»ÑÐ½ÑÑ ÑÐµÑÐµÐ½Ð¸Ð¹. Ð¡ 2019 Ð³Ð¾Ð´Ð° Ð¸Ð»Ð»ÑÑÑÑÐ¸ÑÑÑ Ð³Ð°Ð·ÐµÑÑ Â«ÐÐµÐ³Ð°Ð±Ð°Ð¹ÑÂ» Ð¸ Ð¶ÑÑÐ½Ð°Ð» NewTone, Ð° Ñ 2023 Ð³Ð¾Ð´Ð° ÑÐ²Ð»ÑÑÑÑ Ð±Ð¸Ð»ÑÐ´-ÑÐµÐ´Ð°ÐºÑÐ¾ÑÐ¾Ð¼ Ð´Ð°Ð½Ð½ÑÑ Ð¸Ð·Ð´Ð°Ð½Ð¸Ð¹.</p>
+                        <p>ÐÐ¾Ð¹ Ð¾Ð¿ÑÑ Ð²ÐºÐ»ÑÑÐ°ÐµÑ ÑÐ°Ð·ÑÐ°Ð±Ð¾ÑÐºÑ ÑÐ¸ÑÐ¼ÐµÐ½Ð½Ð¾Ð³Ð¾ ÑÑÐ¸Ð»Ñ Ð¸ Ð°Ð¹Ð´ÐµÐ½ÑÐ¸ÐºÐ¸, ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸Ð»Ð»ÑÑÑÑÐ°ÑÐ¸Ð¹ Ð´Ð»Ñ Ð¿ÐµÑÐ°ÑÐ½ÑÑ Ð¸ ÑÐ¸ÑÑÐ¾Ð²ÑÑ Ð¼ÐµÐ´Ð¸Ð°, Ð½Ð°ÑÑÐµÐ½Ð½ÑÑ ÑÐ¾ÑÐ¿Ð¸ÑÑ, Ð¿Ð¾ÑÑÑÐµÑÐ½ÑÑ Ð¶Ð¸Ð²Ð¾Ð¿Ð¸ÑÑ Ð¸ 3D-Ð¼Ð¾Ð´ÐµÐ»Ð¸ÑÐ¾Ð²Ð°Ð½Ð¸Ðµ.</p>
+                    </div>
+                    <div class="about-skills reveal-up">
+                        <div class="skill-tag">ÐÑÐ°ÑÐ¸ÑÐµÑÐºÐ¸Ð¹ Ð´Ð¸Ð·Ð°Ð¹Ð½</div>
+                        <div class="skill-tag">ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ</div>
+                        <div class="skill-tag">ÐÐ¹Ð´ÐµÐ½ÑÐ¸ÐºÐ°</div>
+                        <div class="skill-tag">ÐÐ°ÑÑÐµÐ½Ð½Ð°Ñ ÑÐ¾ÑÐ¿Ð¸ÑÑ</div>
+                        <div class="skill-tag">ÐÐ¾ÑÑÑÐµÑÑ</div>
+                        <div class="skill-tag">3D / Blender</div>
+                        <div class="skill-tag">ÐÐµÐ±-Ð´Ð¸Ð·Ð°Ð¹Ð½</div>
+                        <div class="skill-tag">ÐÐ¾Ð»Ð¸Ð³ÑÐ°ÑÐ¸Ñ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-track">
+                <span>DESIGN</span><span class="marquee-dot"></span>
+                <span>ILLUSTRATION</span><span class="marquee-dot"></span>
+                <span>WALL ART</span><span class="marquee-dot"></span>
+                <span>PORTRAITS</span><span class="marquee-dot"></span>
+                <span>BRANDING</span><span class="marquee-dot"></span>
+                <span>3D MODELING</span><span class="marquee-dot"></span>
+                <span>DESIGN</span><span class="marquee-dot"></span>
+                <span>ILLUSTRATION</span><span class="marquee-dot"></span>
+                <span>WALL ART</span><span class="marquee-dot"></span>
+                <span>PORTRAITS</span><span class="marquee-dot"></span>
+                <span>BRANDING</span><span class="marquee-dot"></span>
+                <span>3D MODELING</span><span class="marquee-dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Design Section -->
+    <section class="section design-section" id="design">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">02</span>
+                <span class="section-name">ÐÐ¸Ð·Ð°Ð¹Ð½</span>
+            </div>
+            <h2 class="section-heading reveal-text">ÐÑÐ°ÑÐ¸ÑÐµÑÐºÐ¸Ð¹ Ð´Ð¸Ð·Ð°Ð¹Ð½<br>& ÐÑÐµÐ½Ð´Ð¸Ð½Ð³</h2>
+            <p class="section-description reveal-up">Ð Ð°Ð·ÑÐ°Ð±Ð¾ÑÐºÐ° ÑÐ¸ÑÐ¼ÐµÐ½Ð½Ð¾Ð³Ð¾ ÑÑÐ¸Ð»Ñ, Ð°Ð¹Ð´ÐµÐ½ÑÐ¸ÐºÐ¸, Ð¿Ð¾Ð»Ð¸Ð³ÑÐ°ÑÐ¸Ð¸, Ð¿ÑÐµÐ·ÐµÐ½ÑÐ°ÑÐ¸Ð¹ Ð¸ Ð²Ð¸Ð·ÑÐ°Ð»ÑÐ½ÑÑ Ð¼Ð°ÑÐµÑÐ¸Ð°Ð»Ð¾Ð² Ð´Ð»Ñ Ð¿ÑÐ¾ÐµÐºÑÐ¾Ð² Ð¸ Ð¼ÐµÑÐ¾Ð¿ÑÐ¸ÑÑÐ¸Ð¹.</p>
+        </div>
+
+        <!-- Project: School "Zoom" -->
+        <div class="project-showcase">
+            <div class="container">
+                <div class="project-header">
+                    <h3 class="project-title reveal-text">Ð¨ÐºÐ¾Ð»Ð° ÐÐ¸Ð´ÐµÑÐ¾Ð² Â«ÐÐ£ÐÂ»</h3>
+                    <p class="project-desc reveal-up">ÐÐ±ÑÐ°Ð·Ð¾Ð²Ð°ÑÐµÐ»ÑÐ½ÑÐ¹ Ð¿ÑÐ¾ÐµÐºÑ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ ÐÐµÐ³Ð°Ð±Ð°Ð¹Ñ ÐÐµÐ´Ð¸Ð° Ð¿Ð¾ Ð¶ÑÑÐ½Ð°Ð»Ð¸ÑÑÐ¸ÐºÐµ Ð¸ Ð½Ð°Ð¿ÑÐ°Ð²Ð»ÐµÐ½Ð¸ÑÐ¼ Ð¼ÐµÐ´Ð¸Ð°. Ð£Ð¿Ð°ÐºÐ¾Ð²ÐºÐ° Ð¿ÑÐ¾ÐµÐºÑÐ° Ð² ÑÐ·Ð½Ð°Ð²Ð°ÐµÐ¼ÑÑ Ð°Ð¹Ð´ÐµÐ½ÑÐ¸ÐºÑ Ð¸ ÐµÐ´Ð¸Ð½ÑÐ¹ Ð²Ð¸Ð·ÑÐ°Ð»ÑÐ½ÑÐ¹ ÑÑÐ¸Ð»Ñ.</p>
+                </div>
+            </div>
+            <div class="horizontal-scroll-wrap">
+                <div class="horizontal-scroll" data-speed="1">
+                    <div class="h-scroll-item"><img src="static/design/image5.png" alt="Ð¨ÐºÐ¾Ð»Ð° ÐÐ¸Ð´ÐµÑÐ¾Ð² ÐÐ£Ð" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image7.png" alt="ÐÐ£Ð Ð´Ð¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image8.png" alt="ÐÐ£Ð Ð¿Ð¾Ð»Ð¸Ð³ÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image9.png" alt="ÐÐ£Ð Ð¼Ð°ÑÐµÑÐ¸Ð°Ð»Ñ" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image10.png" alt="ÐÐ£Ð Ð¼Ð°ÑÐµÑÐ¸Ð°Ð»Ñ" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image11.png" alt="ÐÐ£Ð Ð¼Ð°ÑÐµÑÐ¸Ð°Ð»Ñ" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image12.png" alt="ÐÐ£Ð Ð¼Ð°ÑÐµÑÐ¸Ð°Ð»Ñ" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image13.jpeg" alt="ÐÐ£Ð Ð¼Ð°ÑÐµÑÐ¸Ð°Ð»Ñ" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project: Science Media AI -->
+        <div class="project-showcase">
+            <div class="container">
+                <div class="project-header">
+                    <h3 class="project-title reveal-text">Science Media AI 2024</h3>
+                    <p class="project-desc reveal-up">ÐÐ±ÑÐ°Ð·Ð¾Ð²Ð°ÑÐµÐ»ÑÐ½ÑÐ¹ ÑÐ¾ÑÑÐ¼ Ð¸ ÑÐ°ÐºÐ°ÑÐ¾Ð½ Ð¿Ð¾ Ð¸ÑÐ¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°Ð½Ð¸Ñ Ð³ÐµÐ½ÐµÑÐ°ÑÐ¸Ð²Ð½ÑÑ Ð¼ÐµÐ´Ð¸Ð°. Ð Ð°Ð·ÑÐ°Ð±Ð¾ÑÐºÐ° ÑÐ¸ÑÐ¼ÐµÐ½Ð½Ð¾Ð³Ð¾ ÑÑÐ¸Ð»Ñ Ð¸ Ð°Ð¹Ð´ÐµÐ½ÑÐ¸ÐºÐ¸ Ð¼ÐµÑÐ¾Ð¿ÑÐ¸ÑÑÐ¸Ñ, Ð¼Ð°ÐºÐµÑÑ Ð´Ð»Ñ ÑÐ¾ÑÐ¸Ð°Ð»ÑÐ½ÑÑ ÑÐµÑÐµÐ¹ Ð¸ Ð¿ÐµÑÐ°ÑÐ½Ð¾Ð¹ Ð¿ÑÐ¾Ð´ÑÐºÑÐ¸Ð¸. <em>VK - Science Media AI</em></p>
+                </div>
+            </div>
+            <div class="horizontal-scroll-wrap">
+                <div class="horizontal-scroll" data-speed="-1">
+                    <div class="h-scroll-item"><img src="static/design/image14.png" alt="Science Media AI" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image15.png" alt="Science Media AI Ð´Ð¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image16.png" alt="Science Media AI Ð¼Ð°ÑÐµÑÐ¸Ð°Ð»Ñ" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image17.jpeg" alt="Science Media AI Ð¿Ð¾Ð»Ð¸Ð³ÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image18.jpeg" alt="Science Media AI" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Grid: More works -->
+        <div class="container">
+            <div class="project-header" style="margin-top: 6rem;">
+                <h3 class="project-title reveal-text">ÐÑÑ Ð¿ÑÐ¾ÐµÐºÑÑ</h3>
+                <p class="project-desc reveal-up">ÐÐ°ÑÑÐ¾ÑÐºÐ¸-Ð°Ð½Ð¾Ð½ÑÑ Ð¶ÑÑÐ½Ð°Ð»Ð¾Ð², Ð¼ÐµÑÑ, Ð¾ÑÐ¾ÑÐ¼Ð»ÐµÐ½Ð¸Ðµ Ð¼ÐµÑÐ¾Ð¿ÑÐ¸ÑÑÐ¸Ð¹, Ð¿Ð¾Ð´ÐºÐ°ÑÑÑ, Ð¿ÑÐµÐ·ÐµÐ½ÑÐ°ÑÐ¸Ð¸ Ð¸ Ð¿ÑÑÐµÐ²Ð¾Ð´Ð¸ÑÐµÐ»Ð¸.</p>
+            </div>
+            <div class="masonry-grid design-grid">
+                <div class="grid-item reveal-up"><img src="static/design/image20.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½ Ð¿ÑÐ¾ÐµÐºÑ" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image21.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½ Ð¿ÑÐ¾ÐµÐºÑ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image22.png" alt="ÐÐ½Ð¾Ð½ÑÑ Ð¶ÑÑÐ½Ð°Ð»Ð¾Ð²" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image23.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image24.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image25.png" alt="ÐÐµÑÑ Ð´Ð¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image26.png" alt="ÐÐµÑÑ" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image27.png" alt="Ð¡Ð¸ÑÐ½Ð¸Ðµ ÐÐ¢ÐÐ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image28.png" alt="Ð¡ÑÐµÐ½Ð´Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image29.png" alt="Ð¢Ð¸Ð¿Ñ Ð² IT" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image30.png" alt="VK Ð¿ÑÐ¾ÐµÐºÑ" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image31.png" alt="ÐÐ¾Ð´ÐºÐ°ÑÑ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image32.png" alt="ÐÐ±Ð»Ð¾Ð¶ÐºÐ°" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image33.jpeg" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image34.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image35.jpeg" alt="Ð ÐµÐ´Ð¸Ð·Ð°Ð¹Ð½ ÑÐ°Ð¹ÑÐ°" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image36.jpeg" alt="Ð¡Ð°Ð¹Ñ Ð¿Ð¾ÑÑÑÐ¾Ð»Ð¸Ð¾" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image37.jpeg" alt="ÐÐµÐ±-Ð´Ð¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image38.jpeg" alt="ÐÑÐ¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image39.jpeg" alt="TESTIK" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image40.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image41.jpeg" alt="3D Ð¼Ð¾Ð´ÐµÐ»Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image42.jpeg" alt="3D Ð¼Ð¾Ð´ÐµÐ»Ð¸" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image43.jpeg" alt="Knowledge Tree" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image44.jpeg" alt="Blender" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image45.jpeg" alt="3D" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image46.jpeg" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image47.jpeg" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image48.jpeg" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image49.jpeg" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image50.jpeg" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image51.png" alt="ÐÑÐµÐ·ÐµÐ½ÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image52.png" alt="ÐÑÑÐµÐ²Ð¾Ð´Ð¸ÑÐµÐ»Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image61.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image62.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image63.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image64.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image65.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image66.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image67.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image68.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image69.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image70.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image71.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image72.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image73.jpeg" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image74.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image75.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image76.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image77.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image78.png" alt="ÐÐ¸Ð·Ð°Ð¹Ð½" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Illustrations Section -->
+    <section class="section illustrations-section" id="illustrations">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">03</span>
+                <span class="section-name">ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ð¸</span>
+            </div>
+            <h2 class="section-heading reveal-text">ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ð¸<br>Ñ 2019 Ð¿Ð¾ ÑÐµÐ³Ð¾Ð´Ð½Ñ</h2>
+            <p class="section-description reveal-up">Ð¡ 2019 Ð³Ð¾Ð´Ð° Ð¸Ð»Ð»ÑÑÑÑÐ¸ÑÑÑ Ð³Ð°Ð·ÐµÑÑ Â«ÐÐµÐ³Ð°Ð±Ð°Ð¹ÑÂ» Ð¸ Ð¶ÑÑÐ½Ð°Ð» NewTone. Ð¡ 2023 Ð³Ð¾Ð´Ð° ÑÐ²Ð»ÑÑÑÑ Ð±Ð¸Ð»ÑÐ´-ÑÐµÐ´Ð°ÐºÑÐ¾ÑÐ¾Ð¼ Ð´Ð°Ð½Ð½ÑÑ Ð¸Ð·Ð´Ð°Ð½Ð¸Ð¹. Ð¢Ð°ÐºÐ¶Ðµ ÐºÑÑÐ¸ÑÑÑ ÑÐ°Ð·Ð´ÐµÐ» ÑÐ°ÑÐºÑÐ°ÑÐ¾Ðº Ð´Ð»Ñ Ð´ÐµÑÑÐºÐ¾Ð¹ ÑÐµÑÐºÐ¾Ð²Ð½Ð¾Ð¹ Ð³Ð°Ð·ÐµÑÑ Â«Ð Ð¾Ð¼Ð°Ð½Ð¾Ð²ÑÐºÐ¸Ð¹ Ð²ÐµÑÑÐ½Ð¸ÐºÂ».</p>
+        </div>
+
+        <div class="container">
+            <div class="masonry-grid illustrations-grid">
+                <div class="grid-item reveal-up"><img src="static/illustrations/image53.jpeg" alt="NewTone Ð¸Ð»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/illustrations/image54.jpeg" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image55.jpeg" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/illustrations/image56.jpeg" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image57.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image58.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/illustrations/image59.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image60.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/illustrations/image87.png" alt="Ð Ð°ÑÐºÑÐ°ÑÐºÐ°" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image88.jpeg" alt="Ð Ð°ÑÐºÑÐ°ÑÐºÐ° ÑÑÐ°Ð¼Ð¾Ð²" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image89.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image90.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/illustrations/image91.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image92.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image93.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/illustrations/image94.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image95.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wall Painting Section -->
+    <section class="section wall-section" id="wall-painting">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">04</span>
+                <span class="section-name">Ð Ð¾ÑÐ¿Ð¸ÑÑ ÑÑÐµÐ½</span>
+            </div>
+            <h2 class="section-heading reveal-text">ÐÐ°ÑÑÐµÐ½Ð½Ð°Ñ<br>ÑÐ¾ÑÐ¿Ð¸ÑÑ</h2>
+            <p class="section-description reveal-up">ÐÑÐµÐ½ÑÑ 2021 Ð³Ð¾Ð´Ð° ÑÐ°Ð±Ð¾ÑÐ°Ð»Ð° Ð½Ð°Ð´ Ð´Ð²ÑÐ¼Ñ Ð¿ÑÐ¾ÐµÐºÑÐ°Ð¼Ð¸ ÑÐµÐ´Ð¸Ð·Ð°Ð¹Ð½Ð° Ð¿ÑÐ¾ÑÑÑÐ°Ð½ÑÑÐ², Ð±Ð¾Ð»ÑÑÑÑ ÑÐ°ÑÑÑ ÐºÐ¾ÑÐ¾ÑÑÑ Ð·Ð°Ð½ÑÐ»Ð° Ð¸Ð»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ ÑÑÐµÐ½.</p>
+        </div>
+
+        <!-- Coffeeteka Project -->
+        <div class="case-study">
+            <div class="container">
+                <div class="case-header">
+                    <div class="case-info reveal-up">
+                        <span class="case-year">2021</span>
+                        <h3 class="case-title">ÐÑÐ¾ÐµÐºÑ CoffeeTeka</h3>
+                        <p class="case-location">ÐÐ¸Ð»ÑÐ½ÑÑ</p>
+                        <p class="case-desc">Ð Ð¾ÑÐ¿Ð¸ÑÑ ÑÑÐµÐ½Ñ ÐºÐ¾ÑÐµÐ¹Ð½Ð¸ CoffeeTeka. Ð¢ÑÐ¾Ð¿Ð¸ÑÐµÑÐºÐ¸Ðµ Ð¼Ð¾ÑÐ¸Ð²Ñ Ñ Ð¿ÑÐ¸ÑÐ°Ð¼Ð¸ Ð¸ ÑÐ°ÑÑÐµÐ½Ð¸ÑÐ¼Ð¸.</p>
+                    </div>
+                </div>
+                <div class="case-images">
+                    <div class="case-img case-img--large reveal-up"><img src="static/wall_painting/image107.jpeg" alt="CoffeeTeka ÑÐ¾ÑÐ¿Ð¸ÑÑ" loading="lazy"></div>
+                    <div class="case-img-row">
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image108.jpeg" alt="CoffeeTeka Ð´Ð¾ Ð¸ Ð¿Ð¾ÑÐ»Ðµ" loading="lazy"></div>
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image109.png" alt="CoffeeTeka Ð´ÐµÑÐ°Ð»Ð¸" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Children's Room -->
+        <div class="case-study">
+            <div class="container">
+                <div class="case-header">
+                    <div class="case-info reveal-up">
+                        <span class="case-year">2021</span>
+                        <h3 class="case-title">Ð¢ÑÐ°Ð½ÑÑÐ¾ÑÐ¼Ð°ÑÐ¸Ñ Ð´ÐµÑÑÐºÐ¾Ð¹ ÐºÐ¾Ð¼Ð½Ð°ÑÑ</h3>
+                        <p class="case-location">ÐÐ½ÐµÐ²Ð½Ð¾Ð¹ ÑÐµÐ½ÑÑ Ð´Ð»Ñ Ð´ÐµÑÐµÐ¹ Ð¿ÑÐ¸ÑÐ¾Ð´Ð° ÑÑÐ°Ð¼Ð° ÑÐ²ÑÑÑÑ ÐÐ¾Ð½ÑÑÐ°Ð½ÑÐ¸Ð½Ð° Ð¸ ÐÐ¸ÑÐ°Ð¸Ð»Ð°, ÐÐ¸Ð»ÑÐ½ÑÑ</p>
+                        <p class="case-desc">ÐÐ¾ÐºÑÐ°ÑÐºÐ° ÑÑÐµÐ½ Ð¸ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð´Ð²ÑÑ Ð½Ð°ÑÑÐµÐ½Ð½ÑÑ Ð¸Ð»Ð»ÑÑÑÑÐ°ÑÐ¸Ð¹. ÐÐ±ÑÐµÐµ Ð²ÑÐµÐ¼Ñ ÑÐ°Ð±Ð¾ÑÑ â 1 Ð¼ÐµÑÑÑ.</p>
+                    </div>
+                </div>
+                <div class="case-images">
+                    <div class="case-img-row">
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image110.png" alt="ÐÐµÑÑÐºÐ°Ñ ÐºÐ¾Ð¼Ð½Ð°ÑÐ°" loading="lazy"></div>
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image111.png" alt="ÐÐµÑÑÐºÐ°Ñ ÑÐ¾ÑÐ¿Ð¸ÑÑ" loading="lazy"></div>
+                    </div>
+                    <div class="case-img-row">
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image112.png" alt="ÐÐ»Ð»ÑÑÑÑÐ°ÑÐ¸Ñ ÑÑÐµÐ½Ñ" loading="lazy"></div>
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image113.png" alt="Ð ÐµÐ·ÑÐ»ÑÑÐ°Ñ ÑÐ¾ÑÐ¿Ð¸ÑÐ¸" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portraits Section -->
+    <section class="section portraits-section" id="portraits">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">05</span>
+                <span class="section-name">ÐÐ¾ÑÑÑÐµÑÑ</span>
+            </div>
+            <h2 class="section-heading reveal-text">ÐÐ¾ÑÑÑÐµÑÑ<br>Ñ 2014 Ð¿Ð¾ ÑÐµÐ³Ð¾Ð´Ð½Ñ</h2>
+            <p class="section-description reveal-up">Ð¦Ð¸ÑÑÐ¾Ð²ÑÐµ Ð¿Ð¾ÑÑÑÐµÑÑ Ð¸ Ð¿Ð¾ÑÑÑÐµÑÑ ÑÐ²ÐµÑÐ½ÑÐ¼Ð¸ ÐºÐ°ÑÐ°Ð½Ð´Ð°ÑÐ°Ð¼Ð¸.</p>
+        </div>
+
+        <div class="container">
+            <div class="masonry-grid portraits-grid">
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/portraits/image1.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image96.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image97.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/portraits/image98.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image99.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/portraits/image100.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image101.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image102.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/portraits/image103.png" alt="ÐÐ¾ÑÑÑÐµÑ" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image104.jpeg" alt="ÐÐ¾ÑÑÑÐµÑ ÐºÐ°ÑÐ°Ð½Ð´Ð°ÑÐ°Ð¼Ð¸" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image105.jpeg" alt="ÐÐ¾ÑÑÑÐµÑ ÐºÐ°ÑÐ°Ð½Ð´Ð°ÑÐ°Ð¼Ð¸" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">06</span>
+                <span class="section-name">ÐÐ¾Ð½ÑÐ°ÐºÑ</span>
+            </div>
+            <div class="contact-content">
+                <h2 class="contact-heading reveal-text">ÐÑÐ´ÐµÐ¼<br>Ð½Ð° ÑÐ²ÑÐ·Ð¸</h2>
+                <div class="contact-info reveal-up">
+                    <p class="contact-tagline">ÐÑÐºÑÑÑÐ° Ðº Ð½Ð¾Ð²ÑÐ¼ Ð¿ÑÐ¾ÐµÐºÑÐ°Ð¼ Ð¸ ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÑÐµÑÑÐ²Ñ</p>
+                    <div class="contact-links">
+                        <a href="https://mbradio.ru/authors/238" target="_blank" rel="noopener" class="contact-link magnetic">
+                            <span class="contact-link-label">ÐÑÐ±Ð»Ð¸ÐºÐ°ÑÐ¸Ð¸</span>
+                            <span class="contact-link-text">mbradio.ru</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-copy">&copy; 2024 ÐÐ°Ð±ÑÐ¸ÑÐ»Ðµ ÐÐµÑÑÐ»Ð°Ð¹ÑÐ¸ÑÐµ</span>
+            <a href="#hero" class="footer-top magnetic">ÐÐ°Ð²ÐµÑÑ</a>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

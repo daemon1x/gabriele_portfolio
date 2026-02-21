@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Габриэле Герулайтите — Art Portfolio</title>
+    <meta name="description" content="Портфолио художницы и дизайнера Габриэле Герулайтите. Графический дизайн, иллюстрации, настенная роспись, портреты.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-line"></div>
+            <span class="preloader-text">GABRIELE</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-logo">G.</a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link" data-index="01">Обо мне</a>
+            <a href="#design" class="nav-link" data-index="02">Дизайн</a>
+            <a href="#illustrations" class="nav-link" data-index="03">Иллюстрации</a>
+            <a href="#wall-painting" class="nav-link" data-index="04">Роспись стен</a>
+            <a href="#portraits" class="nav-link" data-index="05">Портреты</a>
+            <a href="#contact" class="nav-link" data-index="06">Контакт</a>
+        </div>
+        <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="#about" class="mobile-link">Обо мне</a>
+            <a href="#design" class="mobile-link">Дизайн</a>
+            <a href="#illustrations" class="mobile-link">Иллюстрации</a>
+            <a href="#wall-painting" class="mobile-link">Роспись стен</a>
+            <a href="#portraits" class="mobile-link">Портреты</a>
+            <a href="#contact" class="mobile-link">Контакт</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grain"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-subtitle">
+                <span class="line-mask"><span class="hero-subtitle-text">ART PORTFOLIO</span></span>
+            </div>
+            <h1 class="hero-title">
+                <span class="line-mask"><span class="hero-title-line">Габриэле</span></span>
+                <span class="line-mask"><span class="hero-title-line">Герулайтите</span></span>
+            </h1>
+            <div class="hero-role">
+                <span class="line-mask"><span class="hero-role-text">Художница &mdash; Дизайнер &mdash; Иллюстратор</span></span>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+        <div class="hero-image-float">
+            <img src="static/my_photos/image2.png" alt="Габриэле" loading="eager">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">01</span>
+                <span class="section-name">Обо мне</span>
+            </div>
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img about-img-main" data-speed="0.9">
+                        <img src="static/my_photos/image6.jpeg" alt="Габриэле за работой" loading="lazy">
+                    </div>
+                    <div class="about-img about-img-secondary" data-speed="1.1">
+                        <img src="static/my_photos/image115.jpeg" alt="Габриэле" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-heading reveal-text">
+                        Где искусство<br>встречает дизайн
+                    </h2>
+                    <div class="about-description reveal-up">
+                        <p>Я — художница и графический дизайнер с многолетним опытом в создании визуальных решений. С 2019 года иллюстрирую газету «Мегабайт» и журнал NewTone, а с 2023 года являюсь бильд-редактором данных изданий.</p>
+                        <p>Мой опыт включает разработку фирменного стиля и айдентики, создание иллюстраций для печатных и цифровых медиа, настенную роспись, портретную живопись и 3D-моделирование.</p>
+                    </div>
+                    <div class="about-skills reveal-up">
+                        <div class="skill-tag">Графический дизайн</div>
+                        <div class="skill-tag">Иллюстрация</div>
+                        <div class="skill-tag">Айдентика</div>
+                        <div class="skill-tag">Настенная роспись</div>
+                        <div class="skill-tag">Портреты</div>
+                        <div class="skill-tag">3D / Blender</div>
+                        <div class="skill-tag">Веб-дизайн</div>
+                        <div class="skill-tag">Полиграфия</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-track">
+                <span>DESIGN</span><span class="marquee-dot"></span>
+                <span>ILLUSTRATION</span><span class="marquee-dot"></span>
+                <span>WALL ART</span><span class="marquee-dot"></span>
+                <span>PORTRAITS</span><span class="marquee-dot"></span>
+                <span>BRANDING</span><span class="marquee-dot"></span>
+                <span>3D MODELING</span><span class="marquee-dot"></span>
+                <span>DESIGN</span><span class="marquee-dot"></span>
+                <span>ILLUSTRATION</span><span class="marquee-dot"></span>
+                <span>WALL ART</span><span class="marquee-dot"></span>
+                <span>PORTRAITS</span><span class="marquee-dot"></span>
+                <span>BRANDING</span><span class="marquee-dot"></span>
+                <span>3D MODELING</span><span class="marquee-dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Design Section -->
+    <section class="section design-section" id="design">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">02</span>
+                <span class="section-name">Дизайн</span>
+            </div>
+            <h2 class="section-heading reveal-text">Графический дизайн<br>& Брендинг</h2>
+            <p class="section-description reveal-up">Разработка фирменного стиля, айдентики, полиграфии, презентаций и визуальных материалов для проектов и мероприятий.</p>
+        </div>
+
+        <!-- Project: School "Zoom" -->
+        <div class="project-showcase">
+            <div class="container">
+                <div class="project-header">
+                    <h3 class="project-title reveal-text">Школа Лидеров «ЗУМ»</h3>
+                    <p class="project-desc reveal-up">Образовательный проект команды Мегабайт Медиа по журналистике и направлениям медиа. Упаковка проекта в узнаваемую айдентику и единый визуальный стиль.</p>
+                </div>
+            </div>
+            <div class="horizontal-scroll-wrap">
+                <div class="horizontal-scroll" data-speed="1">
+                    <div class="h-scroll-item"><img src="static/design/image5.png" alt="Школа Лидеров ЗУМ" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image7.png" alt="ЗУМ дизайн" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image8.png" alt="ЗУМ полиграфия" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image9.png" alt="ЗУМ материалы" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image10.png" alt="ЗУМ материалы" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image11.png" alt="ЗУМ материалы" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image12.png" alt="ЗУМ материалы" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image13.jpeg" alt="ЗУМ материалы" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project: Science Media AI -->
+        <div class="project-showcase">
+            <div class="container">
+                <div class="project-header">
+                    <h3 class="project-title reveal-text">Science Media AI 2024</h3>
+                    <p class="project-desc reveal-up">Образовательный форум и хакатон по использованию генеративных медиа. Разработка фирменного стиля и айдентики мероприятия, макеты для социальных сетей и печатной продукции. <em>VK - Science Media AI</em></p>
+                </div>
+            </div>
+            <div class="horizontal-scroll-wrap">
+                <div class="horizontal-scroll" data-speed="-1">
+                    <div class="h-scroll-item"><img src="static/design/image14.png" alt="Science Media AI" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image15.png" alt="Science Media AI дизайн" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image16.png" alt="Science Media AI материалы" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image17.jpeg" alt="Science Media AI полиграфия" loading="lazy"></div>
+                    <div class="h-scroll-item"><img src="static/design/image18.jpeg" alt="Science Media AI" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design Grid: More works -->
+        <div class="container">
+            <div class="project-header" style="margin-top: 6rem;">
+                <h3 class="project-title reveal-text">Ещё проекты</h3>
+                <p class="project-desc reveal-up">Карточки-анонсы журналов, мерч, оформление мероприятий, подкасты, презентации и путеводители.</p>
+            </div>
+            <div class="masonry-grid design-grid">
+                <div class="grid-item reveal-up"><img src="static/design/image20.png" alt="Дизайн проект" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image21.png" alt="Дизайн проект" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image22.png" alt="Анонсы журналов" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image23.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image24.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image25.png" alt="Мерч дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image26.png" alt="Мерч" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image27.png" alt="Сияние ИТМО" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image28.png" alt="Стенды" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image29.png" alt="Типы в IT" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image30.png" alt="VK проект" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image31.png" alt="Подкаст" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image32.png" alt="Обложка" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image33.jpeg" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image34.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image35.jpeg" alt="Редизайн сайта" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image36.jpeg" alt="Сайт портфолио" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image37.jpeg" alt="Веб-дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image38.jpeg" alt="Приложение" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image39.jpeg" alt="TESTIK" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image40.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image41.jpeg" alt="3D модель" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image42.jpeg" alt="3D модели" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image43.jpeg" alt="Knowledge Tree" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image44.jpeg" alt="Blender" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image45.jpeg" alt="3D" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image46.jpeg" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image47.jpeg" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image48.jpeg" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image49.jpeg" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image50.jpeg" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image51.png" alt="Презентация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image52.png" alt="Путеводитель" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image61.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image62.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image63.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image64.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image65.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image66.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image67.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image68.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image69.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image70.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image71.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image72.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image73.jpeg" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image74.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image75.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image76.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image77.png" alt="Дизайн" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/design/image78.png" alt="Дизайн" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Illustrations Section -->
+    <section class="section illustrations-section" id="illustrations">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">03</span>
+                <span class="section-name">Иллюстрации</span>
+            </div>
+            <h2 class="section-heading reveal-text">Иллюстрации<br>с 2019 по сегодня</h2>
+            <p class="section-description reveal-up">С 2019 года иллюстрирую газету «Мегабайт» и журнал NewTone. С 2023 года являюсь бильд-редактором данных изданий. Также курирую раздел раскрасок для детской церковной газеты «Романовский вестник».</p>
+        </div>
+
+        <div class="container">
+            <div class="masonry-grid illustrations-grid">
+                <div class="grid-item reveal-up"><img src="static/illustrations/image53.jpeg" alt="NewTone иллюстрация" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/illustrations/image54.jpeg" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image55.jpeg" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/illustrations/image56.jpeg" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image57.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image58.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/illustrations/image59.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image60.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/illustrations/image87.png" alt="Раскраска" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image88.jpeg" alt="Раскраска храмов" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image89.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image90.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/illustrations/image91.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image92.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image93.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/illustrations/image94.png" alt="Иллюстрация" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/illustrations/image95.png" alt="Иллюстрация" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wall Painting Section -->
+    <section class="section wall-section" id="wall-painting">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">04</span>
+                <span class="section-name">Роспись стен</span>
+            </div>
+            <h2 class="section-heading reveal-text">Настенная<br>роспись</h2>
+            <p class="section-description reveal-up">Осенью 2021 года работала над двумя проектами редизайна пространств, большую часть которых заняла иллюстрация стен.</p>
+        </div>
+
+        <!-- Coffeeteka Project -->
+        <div class="case-study">
+            <div class="container">
+                <div class="case-header">
+                    <div class="case-info reveal-up">
+                        <span class="case-year">2021</span>
+                        <h3 class="case-title">Проект CoffeeTeka</h3>
+                        <p class="case-location">Вильнюс</p>
+                        <p class="case-desc">Роспись стены кофейни CoffeeTeka. Тропические мотивы с птицами и растениями.</p>
+                    </div>
+                </div>
+                <div class="case-images">
+                    <div class="case-img case-img--large reveal-up"><img src="static/wall_painting/image107.jpeg" alt="CoffeeTeka роспись" loading="lazy"></div>
+                    <div class="case-img-row">
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image108.jpeg" alt="CoffeeTeka до и после" loading="lazy"></div>
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image109.png" alt="CoffeeTeka детали" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Children's Room -->
+        <div class="case-study">
+            <div class="container">
+                <div class="case-header">
+                    <div class="case-info reveal-up">
+                        <span class="case-year">2021</span>
+                        <h3 class="case-title">Трансформация детской комнаты</h3>
+                        <p class="case-location">Дневной центр для детей прихода храма святых Константина и Михаила, Вильнюс</p>
+                        <p class="case-desc">Покраска стен и создание двух настенных иллюстраций. Общее время работы — 1 месяц.</p>
+                    </div>
+                </div>
+                <div class="case-images">
+                    <div class="case-img-row">
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image110.png" alt="Детская комната" loading="lazy"></div>
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image111.png" alt="Детская роспись" loading="lazy"></div>
+                    </div>
+                    <div class="case-img-row">
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image112.png" alt="Иллюстрация стены" loading="lazy"></div>
+                        <div class="case-img reveal-up"><img src="static/wall_painting/image113.png" alt="Результат росписи" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portraits Section -->
+    <section class="section portraits-section" id="portraits">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">05</span>
+                <span class="section-name">Портреты</span>
+            </div>
+            <h2 class="section-heading reveal-text">Портреты<br>с 2014 по сегодня</h2>
+            <p class="section-description reveal-up">Цифровые портреты и портреты цветными карандашами.</p>
+        </div>
+
+        <div class="container">
+            <div class="masonry-grid portraits-grid">
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/portraits/image1.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image96.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image97.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/portraits/image98.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image99.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item grid-item--tall reveal-up"><img src="static/portraits/image100.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image101.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image102.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item grid-item--wide reveal-up"><img src="static/portraits/image103.png" alt="Портрет" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image104.jpeg" alt="Портрет карандашами" loading="lazy"></div>
+                <div class="grid-item reveal-up"><img src="static/portraits/image105.jpeg" alt="Портрет карандашами" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">06</span>
+                <span class="section-name">Контакт</span>
+            </div>
+            <div class="contact-content">
+                <h2 class="contact-heading reveal-text">Будем<br>на связи</h2>
+                <div class="contact-info reveal-up">
+                    <p class="contact-tagline">Открыта к новым проектам и сотрудничеству</p>
+                    <div class="contact-links">
+                        <a href="https://mbradio.ru/authors/238" target="_blank" rel="noopener" class="contact-link magnetic">
+                            <span class="contact-link-label">Публикации</span>
+                            <span class="contact-link-text">mbradio.ru</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-copy">&copy; 2024 Габриэле Герулайтите</span>
+            <a href="#hero" class="footer-top magnetic">Наверх</a>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
