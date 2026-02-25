@@ -11,7 +11,7 @@
     gsap.set('.hero-subtitle-text', { y: '100%' });
     gsap.set('.hero-title-line', { y: '110%' });
     gsap.set('.hero-role-text', { y: '100%' });
-    gsap.set('.hero-image-float', { autoAlpha: 0 });
+    gsap.set('.hero-image-float', { autoAlpha: 0, y: 30 });
     gsap.set('.hero-scroll', { autoAlpha: 0, y: 20 });
 
     // ---- Preloader ----
@@ -35,6 +35,94 @@
         window.addEventListener('load', () => {
             setTimeout(startSite, 1200);
         });
+    }
+
+    // ---- Hero Canvas Particles ----
+    function initHeroCanvas() {
+        const canvas = document.getElementById('heroCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouse = { x: -1000, y: -1000 };
+        let w, h;
+
+        function resize() {
+            w = canvas.width = canvas.offsetWidth;
+            h = canvas.height = canvas.offsetHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        canvas.parentElement.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+
+        const count = Math.min(80, Math.floor(w * h / 15000));
+
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                vx: (Math.random() - 0.5) * 0.3,
+                vy: (Math.random() - 0.5) * 0.3,
+                r: Math.random() * 1.5 + 0.5,
+                alpha: Math.random() * 0.4 + 0.1
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, w, h);
+
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0) p.x = w;
+                if (p.x > w) p.x = 0;
+                if (p.y < 0) p.y = h;
+                if (p.y > h) p.y = 0;
+
+                const dxm = p.x - mouse.x;
+                const dym = p.y - mouse.y;
+                const distMouse = Math.sqrt(dxm * dxm + dym * dym);
+                const mouseRadius = 150;
+
+                if (distMouse < mouseRadius) {
+                    const force = (1 - distMouse / mouseRadius) * 0.02;
+                    p.vx += dxm * force;
+                    p.vy += dym * force;
+                }
+
+                p.vx *= 0.99;
+                p.vy *= 0.99;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(200, 169, 126, ${p.alpha})`;
+                ctx.fill();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = `rgba(200, 169, 126, ${0.06 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(draw);
+        }
+        draw();
     }
 
     // ---- Custom Cursor ----
@@ -65,7 +153,7 @@
         }
         updateCursor();
 
-        const hoverTargets = 'a, button, .grid-item, .h-scroll-item, .skill-tag, .nav-menu-btn';
+        const hoverTargets = 'a, button, .grid-item, .h-scroll-item, .skill-tag, .nav-menu-btn, .edu-card, .exhibition-link';
         document.addEventListener('mouseover', (e) => {
             if (e.target.closest(hoverTargets)) {
                 document.body.classList.add('cursor-hover');
@@ -75,6 +163,17 @@
             if (e.target.closest(hoverTargets)) {
                 document.body.classList.remove('cursor-hover');
             }
+        });
+    }
+
+    // ---- Scroll Progress ----
+    function initScrollProgress() {
+        const bar = document.getElementById('scrollProgress');
+        if (!bar) return;
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const total = document.documentElement.scrollHeight - window.innerHeight;
+            bar.style.width = (scrolled / total * 100) + '%';
         });
     }
 
@@ -104,14 +203,13 @@
         });
     });
 
-    // ---- Smooth Scroll for anchor links ----
+    // ---- Smooth Scroll ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offset = 0;
-                const top = target.getBoundingClientRect().top + window.scrollY + offset;
+                const top = target.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({ top, behavior: 'smooth' });
             }
         });
@@ -137,6 +235,7 @@
         }, '-=0.8')
         .to('.hero-image-float', {
             autoAlpha: 1,
+            y: 0,
             duration: 1.5,
             ease: 'power3.out'
         }, '-=0.6')
@@ -147,7 +246,7 @@
         }, '-=0.5');
     }
 
-    // ---- Scroll-triggered Reveal Animations ----
+    // ---- Scroll-triggered Reveals ----
     function initRevealAnimations() {
         document.querySelectorAll('.reveal-text').forEach(el => {
             gsap.to(el, {
@@ -163,13 +262,12 @@
             });
         });
 
-        document.querySelectorAll('.reveal-up').forEach((el, i) => {
+        document.querySelectorAll('.reveal-up').forEach((el) => {
             gsap.to(el, {
                 opacity: 1,
                 y: 0,
                 duration: 1,
                 ease: 'expo.out',
-                delay: (i % 4) * 0.08,
                 scrollTrigger: {
                     trigger: el,
                     start: 'top 90%',
@@ -199,6 +297,7 @@
     // ---- Parallax Effects ----
     function initParallax() {
         document.querySelectorAll('[data-speed]').forEach(el => {
+            if (el.closest('.horizontal-scroll')) return;
             const speed = parseFloat(el.dataset.speed);
             gsap.to(el, {
                 y: () => (1 - speed) * 100,
@@ -236,21 +335,42 @@
         });
     }
 
-    // ---- Marquee Speed on Scroll ----
+    // ---- GSAP-driven Marquee (no CSS animation = no jitter) ----
     function initMarquee() {
-        const marqueeTrack = document.querySelector('.marquee-track');
-        if (!marqueeTrack) return;
+        const track = document.querySelector('.marquee-track');
+        if (!track) return;
 
-        let scrollVelocity = 0;
+        const trackWidth = track.scrollWidth / 2;
+
+        gsap.set(track, { x: 0 });
+
+        gsap.to(track, {
+            x: -trackWidth,
+            duration: 40,
+            ease: 'none',
+            repeat: -1,
+            modifiers: {
+                x: gsap.utils.unitize(x => parseFloat(x) % trackWidth)
+            }
+        });
+
+        let skewProxy = { skew: 0 };
+        let clamp = gsap.utils.clamp(-6, 6);
 
         ScrollTrigger.create({
             trigger: '.marquee-section',
             start: 'top bottom',
             end: 'bottom top',
             onUpdate: (self) => {
-                scrollVelocity = self.getVelocity() / 500;
-                const speed = Math.max(10, 30 - Math.abs(scrollVelocity));
-                marqueeTrack.style.animationDuration = speed + 's';
+                let skew = clamp(self.getVelocity() / 300);
+                gsap.to(skewProxy, {
+                    skew: skew,
+                    duration: 0.3,
+                    overwrite: true,
+                    onUpdate: () => {
+                        track.style.transform = track.style.transform.replace(/skewX\([^)]*\)/, '') + ` skewX(${skewProxy.skew}deg)`;
+                    }
+                });
             }
         });
     }
@@ -266,7 +386,7 @@
         let allImages = [];
         let currentIndex = 0;
 
-        document.querySelectorAll('.grid-item img, .case-img img, .h-scroll-item img').forEach(img => {
+        document.querySelectorAll('.grid-item img, .case-img img, .h-scroll-item img, .exhibition-img-main img').forEach(img => {
             allImages.push(img.src);
             img.addEventListener('click', () => {
                 currentIndex = allImages.indexOf(img.src);
@@ -332,17 +452,35 @@
         });
     }
 
-    // ---- Section Divider Lines ----
-    function initSectionLines() {
-        document.querySelectorAll('.section-label').forEach(label => {
-            gsap.from(label.querySelector('.section-name::before'), {
-                scaleX: 0,
-                duration: 0.8,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: label,
-                    start: 'top 85%'
-                }
+    // ---- 3D Tilt on Cards ----
+    function initTiltEffect() {
+        if (window.innerWidth <= 768) return;
+
+        document.querySelectorAll('[data-tilt]').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = (e.clientY - rect.top) / rect.height;
+                const tiltX = (0.5 - y) * 12;
+                const tiltY = (x - 0.5) * 12;
+
+                gsap.to(card, {
+                    rotateX: tiltX,
+                    rotateY: tiltY,
+                    duration: 0.5,
+                    ease: 'power2.out',
+                    transformPerspective: 800,
+                    transformOrigin: 'center'
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    rotateX: 0,
+                    rotateY: 0,
+                    duration: 0.7,
+                    ease: 'elastic.out(1, 0.5)'
+                });
             });
         });
     }
@@ -375,7 +513,7 @@
         });
     }
 
-    // ---- Active Nav Link Highlight ----
+    // ---- Active Nav Link ----
     function initActiveNav() {
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
@@ -398,17 +536,60 @@
         });
     }
 
-    // ---- Initialize Everything ----
+    // ---- Section Reveal Lines ----
+    function initSectionDividers() {
+        document.querySelectorAll('.section').forEach(section => {
+            const label = section.querySelector('.section-label');
+            if (!label) return;
+
+            gsap.from(label, {
+                opacity: 0,
+                x: -30,
+                duration: 1,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: label,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    }
+
+    // ---- Smooth Image Reveal with Curtain ----
+    function initImageReveals() {
+        document.querySelectorAll('.about-img, .case-img--large, .exhibition-img-main').forEach(wrap => {
+            const img = wrap.querySelector('img');
+            if (!img) return;
+
+            gsap.from(img, {
+                scale: 1.2,
+                duration: 1.4,
+                ease: 'expo.out',
+                scrollTrigger: {
+                    trigger: wrap,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+    }
+
+    // ---- Initialize ----
     function init() {
+        initHeroCanvas();
+        initScrollProgress();
         initRevealAnimations();
         initHorizontalScroll();
         initParallax();
         initMarquee();
         initLightbox();
         initGridAnimations();
-        initSectionLines();
+        initTiltEffect();
         initMagnetic();
         initActiveNav();
+        initSectionDividers();
+        initImageReveals();
 
         ScrollTrigger.refresh();
     }

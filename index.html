@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Габриэле Герулайтите — Art Portfolio</title>
-    <meta name="description" content="Портфолио художницы и дизайнера Габриэле Герулайтите. Графический дизайн, иллюстрации, настенная роспись, портреты.">
+    <meta name="description" content="Портфолио художницы и дизайнера Габриэле Герулайтите. Графический дизайн, иллюстрации, настенная роспись, портреты, Art&Science.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,9 @@
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- Preloader -->
     <div class="preloader" id="preloader">
@@ -33,9 +36,10 @@
             <a href="#about" class="nav-link" data-index="01">Обо мне</a>
             <a href="#design" class="nav-link" data-index="02">Дизайн</a>
             <a href="#illustrations" class="nav-link" data-index="03">Иллюстрации</a>
-            <a href="#wall-painting" class="nav-link" data-index="04">Роспись стен</a>
+            <a href="#wall-painting" class="nav-link" data-index="04">Роспись</a>
             <a href="#portraits" class="nav-link" data-index="05">Портреты</a>
-            <a href="#contact" class="nav-link" data-index="06">Контакт</a>
+            <a href="#exhibitions" class="nav-link" data-index="06">Выставки</a>
+            <a href="#contact" class="nav-link" data-index="07">Контакт</a>
         </div>
         <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
             <span></span>
@@ -47,17 +51,22 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-links">
             <a href="#about" class="mobile-link">Обо мне</a>
+            <a href="#education" class="mobile-link">Образование</a>
             <a href="#design" class="mobile-link">Дизайн</a>
             <a href="#illustrations" class="mobile-link">Иллюстрации</a>
             <a href="#wall-painting" class="mobile-link">Роспись стен</a>
             <a href="#portraits" class="mobile-link">Портреты</a>
+            <a href="#exhibitions" class="mobile-link">Выставки</a>
             <a href="#contact" class="mobile-link">Контакт</a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
         <div class="hero-bg">
+            <div class="hero-orb hero-orb--1"></div>
+            <div class="hero-orb hero-orb--2"></div>
             <div class="hero-grain"></div>
         </div>
         <div class="hero-content">
@@ -76,9 +85,6 @@
             <div class="hero-scroll-line"></div>
             <span>Scroll</span>
         </div>
-        <div class="hero-image-float">
-            <img src="static/my_photos/image2.png" alt="Габриэле" loading="eager">
-        </div>
     </section>
 
     <!-- About Section -->
@@ -91,10 +97,10 @@
             <div class="about-grid">
                 <div class="about-images">
                     <div class="about-img about-img-main" data-speed="0.9">
-                        <img src="static/my_photos/image6.jpeg" alt="Габриэле за работой" loading="lazy">
+                        <img src="static/my_photos/image115.jpeg" alt="Габриэле" loading="lazy">
                     </div>
                     <div class="about-img about-img-secondary" data-speed="1.1">
-                        <img src="static/my_photos/image115.jpeg" alt="Габриэле" loading="lazy">
+                        <img src="static/my_photos/image6.jpeg" alt="Габриэле за работой" loading="lazy">
                     </div>
                 </div>
                 <div class="about-text">
@@ -109,11 +115,50 @@
                         <div class="skill-tag">Графический дизайн</div>
                         <div class="skill-tag">Иллюстрация</div>
                         <div class="skill-tag">Айдентика</div>
+                        <div class="skill-tag">Art&Science</div>
                         <div class="skill-tag">Настенная роспись</div>
                         <div class="skill-tag">Портреты</div>
                         <div class="skill-tag">3D / Blender</div>
                         <div class="skill-tag">Веб-дизайн</div>
                         <div class="skill-tag">Полиграфия</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education-section" id="education">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">02</span>
+                <span class="section-name">Образование</span>
+            </div>
+            <div class="education-layout">
+                <div class="education-header">
+                    <h2 class="section-heading reveal-text">Образование</h2>
+                    <div class="education-logo reveal-up">
+                        <img src="static/education/itmo_logo.png" alt="Университет ИТМО" loading="lazy">
+                    </div>
+                </div>
+                <div class="education-cards">
+                    <div class="edu-card reveal-up" data-tilt>
+                        <div class="edu-card-accent"></div>
+                        <div class="edu-card-content">
+                            <span class="edu-card-years">2023 — 2025</span>
+                            <h3 class="edu-card-degree">Магистратура</h3>
+                            <p class="edu-card-program">Инноватика, Art&Science</p>
+                            <p class="edu-card-uni">Университет ИТМО, Санкт-Петербург</p>
+                        </div>
+                    </div>
+                    <div class="edu-card reveal-up" data-tilt>
+                        <div class="edu-card-accent"></div>
+                        <div class="edu-card-content">
+                            <span class="edu-card-years">2019 — 2023</span>
+                            <h3 class="edu-card-degree">Бакалавриат</h3>
+                            <p class="edu-card-program">Прикладная информатика,<br>Мобильные и сетевые технологии</p>
+                            <p class="edu-card-uni">Университет ИТМО, Санкт-Петербург</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,12 +174,14 @@
                 <span>WALL ART</span><span class="marquee-dot"></span>
                 <span>PORTRAITS</span><span class="marquee-dot"></span>
                 <span>BRANDING</span><span class="marquee-dot"></span>
+                <span>ART&SCIENCE</span><span class="marquee-dot"></span>
                 <span>3D MODELING</span><span class="marquee-dot"></span>
                 <span>DESIGN</span><span class="marquee-dot"></span>
                 <span>ILLUSTRATION</span><span class="marquee-dot"></span>
                 <span>WALL ART</span><span class="marquee-dot"></span>
                 <span>PORTRAITS</span><span class="marquee-dot"></span>
                 <span>BRANDING</span><span class="marquee-dot"></span>
+                <span>ART&SCIENCE</span><span class="marquee-dot"></span>
                 <span>3D MODELING</span><span class="marquee-dot"></span>
             </div>
         </div>
@@ -144,7 +191,7 @@
     <section class="section design-section" id="design">
         <div class="container">
             <div class="section-label">
-                <span class="section-number">02</span>
+                <span class="section-number">03</span>
                 <span class="section-name">Дизайн</span>
             </div>
             <h2 class="section-heading reveal-text">Графический дизайн<br>& Брендинг</h2>
@@ -238,18 +285,6 @@
                 <div class="grid-item reveal-up"><img src="static/design/image64.png" alt="Дизайн" loading="lazy"></div>
                 <div class="grid-item reveal-up"><img src="static/design/image65.png" alt="Дизайн" loading="lazy"></div>
                 <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image66.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image67.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image68.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image69.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image70.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image71.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item grid-item--wide reveal-up"><img src="static/design/image72.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image73.jpeg" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image74.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image75.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image76.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item grid-item--tall reveal-up"><img src="static/design/image77.png" alt="Дизайн" loading="lazy"></div>
-                <div class="grid-item reveal-up"><img src="static/design/image78.png" alt="Дизайн" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -258,7 +293,7 @@
     <section class="section illustrations-section" id="illustrations">
         <div class="container">
             <div class="section-label">
-                <span class="section-number">03</span>
+                <span class="section-number">04</span>
                 <span class="section-name">Иллюстрации</span>
             </div>
             <h2 class="section-heading reveal-text">Иллюстрации<br>с 2019 по сегодня</h2>
@@ -292,7 +327,7 @@
     <section class="section wall-section" id="wall-painting">
         <div class="container">
             <div class="section-label">
-                <span class="section-number">04</span>
+                <span class="section-number">05</span>
                 <span class="section-name">Роспись стен</span>
             </div>
             <h2 class="section-heading reveal-text">Настенная<br>роспись</h2>
@@ -349,7 +384,7 @@
     <section class="section portraits-section" id="portraits">
         <div class="container">
             <div class="section-label">
-                <span class="section-number">05</span>
+                <span class="section-number">06</span>
                 <span class="section-name">Портреты</span>
             </div>
             <h2 class="section-heading reveal-text">Портреты<br>с 2014 по сегодня</h2>
@@ -373,11 +408,51 @@
         </div>
     </section>
 
+    <!-- Exhibitions Section -->
+    <section class="section exhibitions-section" id="exhibitions">
+        <div class="container">
+            <div class="section-label">
+                <span class="section-number">07</span>
+                <span class="section-name">Выставки</span>
+            </div>
+            <h2 class="section-heading reveal-text">Выставки</h2>
+        </div>
+
+        <div class="exhibition-showcase">
+            <div class="container">
+                <div class="exhibition-layout">
+                    <div class="exhibition-media reveal-up">
+                        <div class="exhibition-img-main">
+                            <img src="static/exhibitions/ex1.png" alt="Мнимое спасение — инсталляция" loading="lazy">
+                        </div>
+                        <div class="exhibition-img-secondary">
+                            <img src="static/exhibitions/ex2.png" alt="Мнимое спасение — детали" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="exhibition-info reveal-up">
+                        <span class="exhibition-badge">Дипломная работа магистратуры</span>
+                        <h3 class="exhibition-title">Мнимое спасение</h3>
+                        <span class="exhibition-type">Инсталляция (видео, звук)</span>
+                        <p class="exhibition-desc">Проект «Мнимое спасение» — это видеоинсталляция, где зритель наблюдает постепенное разрушение целостности личности человека, чья память стирается и распадается на фрагменты. Направленный звук — тихий шепот — усиливает ощущение близости и замкнутости пространства, вызывая эмоциональный дискомфорт и даже страх.</p>
+                        <div class="exhibition-meta">
+                            <span>Выставка: Машины эмпатии</span>
+                            <span>2025</span>
+                        </div>
+                        <a href="https://art.itmo.ru/ru/exhibitions/empathy_machines/tproduct/1059584041-307740495982-mnimoe-spasenie" target="_blank" rel="noopener" class="exhibition-link magnetic">
+                            <span>Смотреть на сайте ИТМО</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="section contact-section" id="contact">
         <div class="container">
             <div class="section-label">
-                <span class="section-number">06</span>
+                <span class="section-number">08</span>
                 <span class="section-name">Контакт</span>
             </div>
             <div class="contact-content">
@@ -385,6 +460,10 @@
                 <div class="contact-info reveal-up">
                     <p class="contact-tagline">Открыта к новым проектам и сотрудничеству</p>
                     <div class="contact-links">
+                        <a href="https://t.me/gelya_me" target="_blank" rel="noopener" class="contact-link magnetic">
+                            <span class="contact-link-label">Telegram</span>
+                            <span class="contact-link-text">@gelya_me</span>
+                        </a>
                         <a href="https://mbradio.ru/authors/238" target="_blank" rel="noopener" class="contact-link magnetic">
                             <span class="contact-link-label">Публикации</span>
                             <span class="contact-link-text">mbradio.ru</span>
@@ -398,7 +477,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-inner">
-            <span class="footer-copy">&copy; 2024 Габриэле Герулайтите</span>
+            <span class="footer-copy">&copy; 2026</span>
             <a href="#hero" class="footer-top magnetic">Наверх</a>
         </div>
     </footer>
